@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <h1>My Website</h1>
+     
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: relative;
+  animation: slide 3s linear infinite; /* Apply the animation */
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the box perfectly */
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+  position: absolute;
+  top: calc(50% + 20px); /* Slightly offset from center */
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Make box2 appear above box1 */
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 300px;
+  }
+}
+:root {
+  --main-color: lightblue; /* Define the variable */
+}
+
+head {
+  background-color: var(--main-color); /* Use the variable */
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  background-color: var(--main-color); /* Use the variable */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --main
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+
+  
+  <main>
+    <p>This is the main content of the page.</p>
+    <p>The background color changes on smaller screens.</p>
+  </main>
+
+</body>
+</html>
+
+    <!--
+<html>
+<head>
+<style>
+.hero {
+  background-image: url('https://via.placeholder.com/1500x500'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 500px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Text color */
+  padding: 50px;
+}
+
+.hero h1 {
+  font-size: 3em; /* Adjust font size */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px; /* Reduced padding for smaller screens */
+    height: 300px; /*reduce height on smaller screens*/
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Welcome to My Hero Section</h1>
+</div>
+
+</body>
+</html>
+ 
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 4rem; /* Default font size for larger screens */
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3rem; /* Font size for screens between 600px and 900px */
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem; /* Font size for screens smaller than 600px */
+  }
+}
+
+p {
+  font-size: 1.1rem; /* Example description styling */
+}
+</style>
+</head>
+<body>
+
+<h1>My Responsive Title</h1>
+<p>This is a description that accompanies the title. The title's size will change based on the screen width.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}.gallery img {
+  width: 200px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  object-fit: cover;
+  margin: 10px;
+  filter: grayscale(100%); /* Default grayscale filter */
+  transition: filter 0.3s ease; /* Transition effect for filter */
+}.gallery img:hover {
+  filter: grayscale(0%); /* Remove grayscale on hover */
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <img src="https://via.placeholder.com/200x150?text=Image+1" alt="Image 1">
+  <img src="https://via.placeholder.com/200x150?text=Image+2" alt="Image 2">
+  <img src="https://via.placeholder.com/200x150?text=Image+3" alt="Image 3">
+  <img src="https://via.placeholder.com/200x150?text=Image+4" alt="Image 4">
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::selection {
+  background-color: yellow; /* Change the background color */
+  color: black; /* Change the text color */
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Select This Heading</h1>
+<p>This is a paragraph of text. Try selecting some of it with your mouse. You should see the background and text colors change. This is done using the ::selection pseudo-element.</p>
+<p>Here is another paragraph with some more text for selection. Select me!</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>.image-container {
+  position: relative;
+  display: inline-block; /* Or block, depending on your layout */
+}.image-container img {
+  display: block; /* Remove any extra space below the image */
+  width: 500px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}.image-container.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em; /* Adjust as needed */
+  width: 80%; /* Adjust as needed */
+}
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="https://via.placeholder.com/500x300" alt="Overlay Image">
+  <div class="text-overlay">
+    This text is displayed on top of the image!
+  </div>
+</div>
+
+</body>
+</html>
+-->
